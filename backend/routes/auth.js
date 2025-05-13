@@ -14,6 +14,7 @@ import {
   deleteUser,
   uploadAvatar,
   googleSignin,
+  adminUsers,
 } from "../controllers/authControllers.js";
 import { authorizeRoles, isAuthenticateUser } from "../middlewares/auth.js";
 
@@ -33,6 +34,9 @@ router.route("/password/update").put(isAuthenticateUser, updatePassword);
 router
   .route("/admin/users")
   .get(isAuthenticateUser, authorizeRoles("admin"), allUsers);
+  router
+  .route("/users/admins")
+  .get(isAuthenticateUser, authorizeRoles("super_admin"), adminUsers);
 router
   .route("/admin/users/:id")
   .get(isAuthenticateUser, authorizeRoles("admin"), getUserDetails)

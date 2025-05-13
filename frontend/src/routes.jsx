@@ -10,6 +10,7 @@ import { Home, Profile, Tables, Notifications } from "@/pages/dashboard";
 import { SignIn, SignUp } from "@/pages/auth";
 import AdminRequestComponent from "./pages/dashboard/admin/admin-request";
 import AdminRequestDetails from "./pages/dashboard/admin/admin-request-details";
+import AdminUsersComponent from "./pages/dashboard/admin/admins";
 
 const icon = {
   className: "w-5 h-5 text-inherit",
@@ -34,8 +35,8 @@ export const routes = [
       {
         icon: <UserCircleIcon {...icon} />,
         name: "Admins",
-        path: "/profile",
-        element: <Profile />,
+        path: "/admin",
+        element: <AdminUsersComponent />,
       },
       // {
       //   icon: <TableCellsIcon {...icon} />,

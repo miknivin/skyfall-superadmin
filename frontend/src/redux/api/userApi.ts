@@ -110,7 +110,7 @@ export const userApi = createApi({
       }),
     }),
     getAdminUsers: builder.query<AdminUsersResponse, void>({
-      query: () => "/admin/users",
+      query: () => "/users/admins",
       providesTags: ["AdminUsers"],
     }),
     getUserDetails: builder.query<ApiResponse<User>, string>({
