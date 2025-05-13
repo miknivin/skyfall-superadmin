@@ -35,7 +35,7 @@ export const routes = [
       {
         icon: <UserCircleIcon {...icon} />,
         name: "Admins",
-        path: "/admin",
+        path: "/admins",
         element: <AdminUsersComponent />,
       },
       // {
